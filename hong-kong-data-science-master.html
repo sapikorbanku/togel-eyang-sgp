@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Hong Kong Data Science Master
+    </title>
+    <style>:root{--border-radius:5px;--box-shadow:2px 2px 10px;--color:#118bee;--color-accent:#118bee15;--color-bg:#fff;--color-bg-secondary:#e9e9e9;--color-secondary:#0645AD;--color-secondary-accent:#920de90b;--color-shadow:#f4f4f4;--color-text:#000;--color-text-secondary:#999;--font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;--hover-brightness:1.2;--justify-important:center;--justify-normal:left;--line-height:1.5;--width-card:285px;--width-card-medium:460px;--width-card-wide:800px;--width-content:1080px}article aside{background:var(--color-secondary-accent);border-left:4px solid var(--color-secondary);padding:.01rem .8rem}body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-family);line-height:var(--line-height);margin:0;overflow-x:hidden;padding:1rem 0}footer,header,main{margin:0 auto;max-width:var(--width-content);padding:0rem 1rem}hr{background-color:var(--color-bg-secondary);border:none;height:1px;margin:4rem 0}section{display:flex;flex-wrap:wrap;justify-content:var(--justify-important)}section aside{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);margin:1rem;padding:1.25rem;width:var(--width-card)}section aside:hover{box-shadow:var(--box-shadow) var(--color-bg-secondary)}section aside img{max-width:100%}[hidden]{display:none}article header,div header,main header{padding-top:0}header{text-align:var(--justify-important)}header a b,header a em,header a i,header a strong{margin-left:.5rem;margin-right:.5rem}header nav img{margin:1rem 0}section header{padding-top:0;width:100%}nav{align-items:center;display:flex;font-weight:700;justify-content:space-between;margin-bottom:7rem}nav ul{list-style:none;padding:0}nav ul li{display:inline-block;margin:0 .5rem;position:relative;text-align:left}nav ul li:hover ul{display:block}nav ul li ul{background:var(--color-bg);border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:none;height:auto;left:-2px;padding:.5rem 1rem;position:absolute;top:1.7rem;white-space:nowrap;width:auto}nav ul li ul li,nav ul li ul li a{display:block}code,samp{background-color:var(--color-accent);border-radius:var(--border-radius);color:var(--color-text);display:inline-block;margin:0 .1rem;padding:0 .5rem}details{margin:1.3rem 0}details summary{font-weight:700;cursor:pointer}h1,h2,h3,h4,h5,h6{line-height:var(--line-height)}mark{padding:.1rem}ol li,ul li{padding:.2rem 0}p{margin:.75rem 0;padding:0}pre{margin:1rem 0;max-width:var(--width-card-wide);padding:1rem 0}pre code,pre samp{display:block;max-width:var(--width-card-wide);padding:.5rem 2rem;white-space:pre-wrap}small{color:var(--color-text-secondary)}sup{background-color:var(--color-secondary);border-radius:var(--border-radius);color:var(--color-bg);font-size:xx-small;font-weight:700;margin:.2rem;padding:.2rem .3rem;position:relative;top:-2px}a{color:var(--color-secondary);display:inline-block;text-decoration:none}a:hover{filter:brightness(var(--hover-brightness));text-decoration:underline}a b,a em,a i,a strong,button{border-radius:var(--border-radius);display:inline-block;font-size:medium;font-weight:700;line-height:var(--line-height);margin:.5rem 0;padding:1rem 2rem}button{font-family:var(--font-family)}button:hover{cursor:pointer;filter:brightness(var(--hover-brightness))}a b,a strong,button{background-color:var(--color);border:2px solid var(--color);color:var(--color-bg)}a em,a i{border:2px solid var(--color);border-radius:var(--border-radius);color:var(--color);display:inline-block;padding:1rem}figure{margin:0;padding:0}figure img{max-width:100%}figure figcaption{color:var(--color-text-secondary)}button:disabled,input:disabled{background:var(--color-bg-secondary);border-color:var(--color-bg-secondary);color:var(--color-text-secondary);cursor:not-allowed}button[disabled]:hover{filter:none}form{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:block;max-width:var(--width-card-wide);min-width:var(--width-card);padding:1.5rem;text-align:var(--justify-normal)}form header{margin:1.5rem 0;padding:1.5rem 0}input,label,select,textarea{display:block;font-size:inherit;max-width:var(--width-card-wide)}input[type=checkbox],input[type=radio]{display:inline-block}input[type=checkbox]+label,input[type=radio]+label{display:inline-block;font-weight:400;position:relative;top:1px}input,select,textarea{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);margin-bottom:1rem;padding:.4rem .8rem}input[readonly],textarea[readonly]{background-color:var(--color-bg-secondary)}label{font-weight:700;margin-bottom:.2rem}table{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);border-spacing:0;display:inline-block;max-width:100%;overflow-x:auto;padding:0;white-space:nowrap}table td,table th,table tr{padding:.4rem .8rem;text-align:var(--justify-important)}table thead{background-color:var(--color);border-collapse:collapse;border-radius:var(--border-radius);color:var(--color-bg);margin:0;padding:0}table thead th:first-child{border-top-left-radius:var(--border-radius)}table thead th:last-child{border-top-right-radius:var(--border-radius)}table thead th:first-child,table tr td:first-child{text-align:var(--justify-normal)}table tr:nth-child(even){background-color:var(--color-accent)}blockquote{display:block;font-size:x-large;line-height:var(--line-height);margin:1rem auto;max-width:var(--width-card-medium);padding:1.5rem 1rem;text-align:var(--justify-important)}blockquote footer{color:var(--color-text-secondary);display:block;font-size:small;line-height:var(--line-height);padding:1.5rem 0} article{padding: 1.25rem;}.v-cover{height: 480px; object-fit: cover;width: 100vw;cursor: pointer;}.v-image{height: 250px; object-fit: cover;width: 100vw;cursor: pointer;}.dwn-cover{max-height: 460px; object-fit: cover;}.w-100{width: 100vw}.search-box{color:#333;background-color:#f5f5f5;width:85%;height:50px;padding:0 20px;border:none;border-radius:20px;outline:0;border:1px solid #002cd92e}.search-box:active,.search-box:focus,.search-box:hover{border:1px solid #d9008e}.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;padding:.375rem .75rem;margin:0.5rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}.btn-danger{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-group-sm>.btn,.btn-sm{padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}
+</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "DingDong"
+  },
+  "headline": "Hong Kong Data Science Master",
+  "datePublished": "2021-03-08",
+  "image": "https://i.pinimg.com/originals/54/1e/2b/541e2b551a60a009cf9bef3c8283effb.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Togel Eyang SGP",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=hong+kong+data+science+master",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+	<script type='text/javascript' src='//zqvee2re50mr.com/7c/26/34/7c263438c0a922e610bc1e9951cbc44f.js'></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4514872,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4514872&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  --></head>
+<body>
+    <header>
+        <h1>
+            <a href="/">
+            Hong Kong Data Science Master
+            </a>
+        </h1>
+        <p>
+                            Data HK - Pengeluaran Hongkong - Keluaran HK, Data HK Sahabat, Hasil Result HK Hari Ini Dengan update tercepat dan lengkap 
+                    </p>
+        <center>
+            <input class='search-box' id="search-box" placeholder='Search and hit enter..' type='text' name="q" required autocomplete="off" id="search-query">
+            <div class="d-block p-4">
+	<center>
+		<!-- TOP BANNER ADS -->
+	</center>
+</div>        </center>
+    </header>
+    <main>
+        <article>
+    <p><strong>Hong Kong Data Science Master</strong>. Read less Read more about studying in Hong Kong Other options within this field of study. 2019 Master of Data Science Program took a visit to Shenzhen with and the winning team from FinTech Innovation Competition of International University.</p>
+            <figure>
+        <img class="v-cover ads-img" src="https://i.pinimg.com/originals/7b/95/f2/7b95f2bbd7bd936cab0093139984e18b.png" alt="An Introduction To Key Data Science Concepts In 2020 Data Science Data Science Infographic Science" style="width: 100%; padding: 5px; background-color: grey;"  onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTS3oQIIRDf47MSPntIGCgdEQCR-ntq3XRpw';">
+        <figcaption>An Introduction To Key Data Science Concepts In 2020 Data Science Data Science Infographic Science from www.pinterest.com</figcaption>
+    </figure>
+        <p>
+        Many universities and colleges in Hong Kong SAR offer English-taught Masters degrees. Students must complete three core courses and a minimum of 5 electives. Master of Data Science.
+    </p>
+    <h3>Master of Science in Business Analytics Hong Kong University of Science and Technology ranked n1 at Eduniversal Bests Masters Ranking.</h3>
+    <p>This course will be of interest to aged 18 or above with interest in Data Science who are seeking new capability in data analytics and machine learning and expanding new knowledge in Big Data. Demonstrate critical thinking and analytical skills essential for solving real data science problems. I could feel the magic of data when taking subjects related to business analytics. Master of Data Science. Other options within this field of study. Many universities and colleges in Hong Kong SAR offer English-taught Masters degrees.</p>
+</article>
+
+<section>
+
+    <aside>
+        <img class="v-image ads-img" alt="Analytics Staffing For Big Data A Perspective Splunk Blogs Data Analyst Data Science Data Quotes" src="https://i.pinimg.com/originals/0f/f3/a4/0ff3a411a58bc52fd75a3dbfeb3d2f27.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyt8WKGWlkAN8QrWWo-Geo_5PjTs1wf_B50A';" />
+        <small>Source: ar.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Many universities and colleges in Hong Kong SAR offer English-taught Masters degrees.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="The Power Of Visualization In Data Science Data Visualization Data Vizualisation Data Science" src="https://i.pinimg.com/originals/d0/b1/f2/d0b1f26a36e60d002258e3ff07da5370.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG0Xpsk25P7lA38x6jEfCFzvTOHNXzOz0Y6A';" />
+        <small>Source: br.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>The Master of Science in Financial Technology and Data Analytics programme aims to prepare students for a career in the ever-changing world of FinTech a world fuelled by constant technological advancements and innovations.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Data Credibility A Key Data Quality Dimension In The Big Data Era Data Quality Data Science Business Intelligence" src="https://i.pinimg.com/originals/a3/e6/de/a3e6deba054015a6e8c3a20bf6fc3d70.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM2gdBYABuBacpvJhpXYGgOx__ZnHlv48m8Q';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>And Translate and transform advanced research techniques effectively into data science practice in academic fields or industry.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Histogram Terminology Histogram Data Visualization Data Science" src="https://i.pinimg.com/originals/1e/09/d5/1e09d5e1c1a9b8092464e71983cd63fc.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_zXyKF7xQfLpTn77UOWa87fmeth-amAl2Bg';" />
+        <small>Source: in.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>It focuses on data analysis skills and explores core areas of applied and business statistics.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Polyu We Worked Closely With The Renowned Hong Kong Polytechnic University And Their School Of Design On The Refreshing Of Their Messagi School Student Master" src="https://i.pinimg.com/originals/55/ea/a6/55eaa6baa52e195f9ab88f0865bb027e.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7o7_sE44szauYeA6oV-TCC3vvzebW7tRPNw';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Postgraduate Certificate Data Science under registration NCR 252794 Under Registration This newly developed Masters Degree in Data Science programme will provide you with the technical and practical skills to analyse big data that is a key to success in future business digital media and science.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Data Analytics Wallpaper Quantum Computing Data Analytics Business Intelligence Cloud Services" src="https://i.pinimg.com/originals/30/08/be/3008bebc89553ef907c5ea9603248c0c.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTpk44lGaSyBiocCACXC4C0TPIPt3F89Vbpw';" />
+        <small>Source: in.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>It focuses on data analysis skills and explores core areas of applied and business statistics.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Strategyzer Master Class Hong Kong Tak Tik Graphic Facilitation Business Model Canvas Master Class How To Memorize Things" src="https://i.pinimg.com/originals/53/29/c4/5329c4e485cd5b1637913fee509a3ec3.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9CPycVnhb2SCXLecpY3gO6Lbj1yboBuRTgw';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Room 411 Chengdao Building The Chinese University of Hong Kong Shenzhen2001 Longxiang Road Longgang District Shenzhen PR.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcrkw8c6mre9tpda Tzkxqzwrmmtskwyaur6bbertg0 Usqp Cau" src="/search?q=data+scientist+icon&amp;tbm=isch" width="100%" onerror="this.onerror=null;this.src='/search?q=data+scientist+icon&amp;tbm=isch';" />
+        <small>Source: encrypted-tbn0.gstatic.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>CEF Course Title Foundations of Data Analytics Module from Master of Science in Big Data Technology.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="The International Postgraduate Scholarship Ips Programme At The Hong Kong Baptist University Brings To Scholarships Business And Economics Applied Economics" src="https://i.pinimg.com/474x/e2/8d/67/e28d6705befe87046578d3b3a269441d.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo8YilgTF1GpBYBqNDUPVjI9vvCdkHWJT_rA';" />
+        <small>Source: in.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>The Hong Kong University of Science and Technology HKUST CEF Institution Code 003 Institution HKUST CEF Course Code 34Z126908.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Best Ever Comparison On Business Analyst V S Data Analyst Data Science Learning Data Analyst Business Analyst" src="https://i.pinimg.com/originals/15/eb/c6/15ebc66231a178691ae62bc59652b0ae.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-NHR1h3axakxiy-hvVqv08Xdu_iNpknTdmw';" />
+        <small>Source: co.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Apply a range of qualitative and quantitative research methods for data science and analytics.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Bocoran Bandar Angka Togel 21 November 2020 Tikus Besar Sydney 22 Februari" src="https://i.pinimg.com/originals/96/20/b3/9620b36d918a34b48acbf9e3357dd1f7.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXTn0RawnEx9Brde6TEewZqRK6ocAutWNTLg';" />
+        <small>Source: id.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Many universities and colleges in Hong Kong SAR offer English-taught Masters degrees.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Job Skill Mapping For Data Science By Anup Mandavariya Data Scientist At Amazon Data Science Data Scientist Webinar" src="https://i.pinimg.com/originals/d2/af/c8/d2afc8796a56b79dda0e8eba3d938c4d.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX9ZyPWrUdqrkFgNBGqLMEDER4Sp199Q1V0A';" />
+        <small>Source: in.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Case studies helped me look at business from different perspectives and find solutions using different methods.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Data Scientist Anatomy Data Science Learning Data Science Data Scientist" src="https://i.pinimg.com/originals/61/e7/4c/61e74c3e60899bd4ca239b3afce93b17.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYyPrwiIVtRy4lsoWvddEq56ZCHlz5Iivzcg';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>It is unique and timely in the following ways.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="1 Bem Vindo Linkedin Ciencia De Dados Ciencia Da Computacao Programacao De Computadores" src="https://i.pinimg.com/originals/42/0d/62/420d6288d8c0b7deb3ab24c5d468bde7.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF_vBCLx652v9qDZMl4CMZ4B_rGO5vX9CD5A';" />
+        <small>Source: id.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>This programme Master of Science in Data Analytics and Business Economics MScDABE provides solid training in business economic analysis and data analytics.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Master Hypothesis Testing In Statistics Guide In 2020 Data Science Machine Learning Deep Learning Data Visualization" src="https://i.pinimg.com/originals/83/17/0f/83170f33ab8f963cb4fb98ce6acaffca.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY5s0aTXslWvqtXX9f9CFohMcS8LUJDkCf9Q';" />
+        <small>Source: in.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Demonstrate critical thinking and analytical skills essential for solving real data science problems.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Top 50 Ggplot2 Visualizations The Master List With Full R Code Data Science Infographic Data Science Data Science Learning" src="https://i.pinimg.com/736x/9f/7b/4e/9f7b4e0b2d13bef31da89a16bbe53d26.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhEPDrgu7-fbzrQwm8gW_TFwd-rQau5xVWg';" />
+        <small>Source: in.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>The program aims at training students with some science or engineering background who would like to prepare themselves for careers that require modeling skills based on information.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Computer Science Vs Data Science Find Out The Best 8 Comparisons" src="https://cdn.educba.com/academy/wp-content/uploads/2018/02/Computer-Science-vs-Data-Science-1.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoRJKzaq7pQ4jRDt9puHTeeVactmlRWwO1OA';" />
+        <small>Source: www.educba.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>The Master of Science MSc Program in Data-Driven Modeling is jointly offered by the Department of Physics and the Department of Mathematics.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Anatomy Of A Data Scientist Infographic E Learning Infographics Data Science Learning Data Science Learn Computer Science" src="https://i.pinimg.com/originals/27/48/83/2748835a115fa8078061662edd70bac1.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo2_k2sJk2ZAooKLBmdC5xNBTx2AMzAXiYaw';" />
+        <small>Source: ar.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>By taking various applied electives in addition to the core foundation courses students will be trained to analyse business economic issues using relevant data.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Pin By Loraine Lawson On Data Science Data Science Learning Data Science Data Scientist" src="https://i.pinimg.com/originals/b9/b3/62/b9b362936c8af2682f887f9444164f0d.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSAnGN8NZCEp11deEgCatryPqqaiqSnEuStg';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>And Translate and transform advanced research techniques effectively into data science practice in academic fields or industry.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="I9li Zx4jds Jpg 723 1024 Derin Ogrenme Buyuk Veri Bilgisayar Programlama" src="https://i.pinimg.com/originals/e6/4c/86/e64c8661633fba8681073f6ce0b63cf7.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVqgI5ppiV2nlw2VyXILLC8vqTgjUOnidmKA';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Request Information Masters Degrees in Data Science in Hong Kong in Hong Kong 2021.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="What Is Data Science Definition Learn Why Data Science Is Important" src="https://3gp10c1vpy442j63me73gy3s-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-21-at-10.41.22-AM.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb_MdCp7ntouVl7sajoA387ukeHh1WUbNCxQ';" />
+        <small>Source: www.datarobot.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>If youre interested in studying a Data Science Big Data degree in Hong Kong SAR you can view all 5 Masters programmes.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Anatomy Of The New Era Scientist Data Scientist Datascience Datascientist Python Sql Apachespark Data Science Infographic Data Science Data Scientist" src="https://i.pinimg.com/originals/63/b9/a4/63b9a4341626a647df415d303360f1c6.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2H-F34v7IQtxoWhhmdVZfN6ui9ujTxgCYLg';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>This course will be of interest to aged 18 or above with interest in Data Science who are seeking new capability in data analytics and machine learning and expanding new knowledge in Big Data.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Machine Learning On Instagram How Much Time You Invest Data Scientists Work Closely With Business St In 2020 Data Science Learning Data Scientist Data Science" src="https://i.pinimg.com/originals/88/cf/1e/88cf1ec06bf84808a6dbe3fe56d6dd14.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfRsALsMKY7ktV8ZRUHMiroavl8JkZZBLONw';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>This is a part-time taught programme that is based primarily on coursework.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="An Introduction To Key Data Science Concepts In 2020 Data Science Data Science Infographic Science" src="https://i.pinimg.com/originals/7b/95/f2/7b95f2bbd7bd936cab0093139984e18b.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTS3oQIIRDf47MSPntIGCgdEQCR-ntq3XRpw';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Case studies helped me look at business from different perspectives and find solutions using different methods.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="" src="https://i.pinimg.com/originals/0d/fe/29/0dfe29fd2fc149110415ec7b38ea2c07.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9SX4ETWJOqjBb52hEqWYdGNpwiGhxrtbKnA';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Full-time mode with one and a half academic years and part-time mode with two and a half academic years.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="New Tedtalks Video Posted By Youaccel Media On Youaccel In 2020 Online Student Gary Vaynerchuk Fireside Chats" src="https://i.pinimg.com/564x/18/84/97/1884978c01bbad676dde8dac190f3927.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzS_Ku0XTWbKFTKQBYbHVf7pFyBaB05eIRzw';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Many universities and colleges in Hong Kong SAR offer English-taught Masters degrees.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Graphic Recording Valueproposition A Master Class Session Of Strategyzer Businessmodel Businessmodelcanva Business Model Canvas Facilitation Master Class" src="https://i.pinimg.com/originals/bb/62/ee/bb62ee86e05d58959e150fedc4488bf9.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_bIiPkzfBBek6LZgT3_XP2VQNxDKyGc1vrg';" />
+        <small>Source: fi.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Students must complete three core courses and a minimum of 5 electives.</p>
+    </aside>
+</section>
+<section>
+    <article>
+        <p>
+        <center><strong>RELATED POST</strong></center>
+        <center>
+								<a class="badge badge-info" href="/prediksi-master-jitu-sgp-hari-ini-senin.html">prediksi master jitu sgp hari ini senin</a>
+											<a class="badge badge-secondary" href="/predisi-keluar-togell-hari-ini.html">predisi keluar togell hari ini</a>
+											<a class="badge badge-warning" href="/prediksi-sgp-pools-jitu-harian.html">prediksi sgp pools jitu harian</a>
+											<a class="badge badge-danger" href="/prediksi-no-hk-yg-keluar-hari-ini.html">prediksi no hk yg keluar hari ini</a>
+											<a class="badge badge-danger" href="/rekap-data-hk-6d-versi-harian-togel-master.html">rekap data hk 6d versi harian togel master</a>
+											<a class="badge badge-dark" href="/prediksi-nomor-hongkong-yang-akan-keluar-hari-ini.html">prediksi nomor hongkong yang akan keluar hari ini</a>
+											<a class="badge badge-primary" href="/prediksi-tarikan-paito-hk-hari-ini.html">prediksi tarikan paito hk hari ini</a>
+											<a class="badge badge-dark" href="/prediksi-nomor-hongkong-yang-keluar-hari-ini.html">prediksi nomor hongkong yang keluar hari ini</a>
+											<a class="badge badge-info" href="/prediksi-nomor-hk-yang-akan-keluar-malam-ini-hongkong.html">prediksi nomor hk yang akan keluar malam ini hongkong</a>
+											<a class="badge badge-light" href="/rajapaito-net-data-paito-harian-hongkong-6-digit.html">rajapaito net data paito harian hongkong 6 digit</a>
+											<a class="badge badge-danger" href="/referral-data-hongkong-indotogel.html">referral data hongkong indotogel</a>
+											<a class="badge badge-light" href="/prediksi-sgp-rabu-raja-hasil.html">prediksi sgp rabu raja hasil</a>
+											<a class="badge badge-secondary" href="/prediksi-sgp-captain-paito-minggu.html">prediksi sgp captain paito minggu</a>
+											<a class="badge badge-danger" href="/rekap-data-hk-6d.html">rekap data hk 6d</a>
+											<a class="badge badge-dark" href="/prediksi-master-sgp-senin-bang-bona.html">prediksi master sgp senin bang bona</a>
+											<a class="badge badge-secondary" href="/rekap-data-hk-6d-harian.html">rekap data hk 6d harian</a>
+											<a class="badge badge-dark" href="/rekap-data-hk-6d-togeli.html">rekap data hk 6d togeli</a>
+											<a class="badge badge-primary" href="/prediksi-master-hk-rabu-bang-bona.html">prediksi master hk rabu bang bona</a>
+											<a class="badge badge-light" href="/prediksi-no-togel-keluar-sgp-hari-ini.html">prediksi no togel keluar sgp hari ini</a>
+											<a class="badge badge-primary" href="/prediksi-paito-hongkong-hari-ini.html">prediksi paito hongkong hari ini</a>
+							</center>
+        </p>
+    </article>
+</section>
+		<center>
+			<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+	</center>
+</div>		</center>
+    </main>
+    <footer style="padding-top: 50px;">
+        <center>
+                            <a href="/p/dmca.html">Dmca</a>
+                            <a href="/p/contact.html">Contact</a>
+                            <a href="/p/privacy-policy.html">Privacy Policy</a>
+                            <a href="/p/copyright.html">Copyright</a>
+                    </center>
+    </footer>
+    <script type='text/javascript' src='//zqvee2re50mr.com/a4/31/b2/a431b2df4b60e2629306f7e7e7465d31.js'></script>            <script type="text/javascript">
+        window.onload = function() {
+            var v_images = document.getElementsByClassName('ads-img');
+            for(var i = 0; i < v_images.length; i++) {
+                var v_img = v_images[i];
+                v_img.onclick = function() {
+                    window.open('https://zqvee2re50mr.com/f92qg63vc?key=ac20300e264cf09199ec3eda378fd7bb', '_blank');
+                }
+            }
+        }
+    </script>
+        <script type="text/javascript">
+        var search = document.getElementById("search-box");
+        search.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                var target = 'site:'+location.host+' '+search.value;
+                var uri= 'https://www.google.com/search?q='+encodeURIComponent(target);
+                window.location= uri;
+            }
+        });
+    </script>
+</body>
+
+</html>

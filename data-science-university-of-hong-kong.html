@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Data Science University Of Hong Kong
+    </title>
+    <style>:root{--border-radius:5px;--box-shadow:2px 2px 10px;--color:#118bee;--color-accent:#118bee15;--color-bg:#fff;--color-bg-secondary:#e9e9e9;--color-secondary:#0645AD;--color-secondary-accent:#920de90b;--color-shadow:#f4f4f4;--color-text:#000;--color-text-secondary:#999;--font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;--hover-brightness:1.2;--justify-important:center;--justify-normal:left;--line-height:1.5;--width-card:285px;--width-card-medium:460px;--width-card-wide:800px;--width-content:1080px}article aside{background:var(--color-secondary-accent);border-left:4px solid var(--color-secondary);padding:.01rem .8rem}body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-family);line-height:var(--line-height);margin:0;overflow-x:hidden;padding:1rem 0}footer,header,main{margin:0 auto;max-width:var(--width-content);padding:0rem 1rem}hr{background-color:var(--color-bg-secondary);border:none;height:1px;margin:4rem 0}section{display:flex;flex-wrap:wrap;justify-content:var(--justify-important)}section aside{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);margin:1rem;padding:1.25rem;width:var(--width-card)}section aside:hover{box-shadow:var(--box-shadow) var(--color-bg-secondary)}section aside img{max-width:100%}[hidden]{display:none}article header,div header,main header{padding-top:0}header{text-align:var(--justify-important)}header a b,header a em,header a i,header a strong{margin-left:.5rem;margin-right:.5rem}header nav img{margin:1rem 0}section header{padding-top:0;width:100%}nav{align-items:center;display:flex;font-weight:700;justify-content:space-between;margin-bottom:7rem}nav ul{list-style:none;padding:0}nav ul li{display:inline-block;margin:0 .5rem;position:relative;text-align:left}nav ul li:hover ul{display:block}nav ul li ul{background:var(--color-bg);border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:none;height:auto;left:-2px;padding:.5rem 1rem;position:absolute;top:1.7rem;white-space:nowrap;width:auto}nav ul li ul li,nav ul li ul li a{display:block}code,samp{background-color:var(--color-accent);border-radius:var(--border-radius);color:var(--color-text);display:inline-block;margin:0 .1rem;padding:0 .5rem}details{margin:1.3rem 0}details summary{font-weight:700;cursor:pointer}h1,h2,h3,h4,h5,h6{line-height:var(--line-height)}mark{padding:.1rem}ol li,ul li{padding:.2rem 0}p{margin:.75rem 0;padding:0}pre{margin:1rem 0;max-width:var(--width-card-wide);padding:1rem 0}pre code,pre samp{display:block;max-width:var(--width-card-wide);padding:.5rem 2rem;white-space:pre-wrap}small{color:var(--color-text-secondary)}sup{background-color:var(--color-secondary);border-radius:var(--border-radius);color:var(--color-bg);font-size:xx-small;font-weight:700;margin:.2rem;padding:.2rem .3rem;position:relative;top:-2px}a{color:var(--color-secondary);display:inline-block;text-decoration:none}a:hover{filter:brightness(var(--hover-brightness));text-decoration:underline}a b,a em,a i,a strong,button{border-radius:var(--border-radius);display:inline-block;font-size:medium;font-weight:700;line-height:var(--line-height);margin:.5rem 0;padding:1rem 2rem}button{font-family:var(--font-family)}button:hover{cursor:pointer;filter:brightness(var(--hover-brightness))}a b,a strong,button{background-color:var(--color);border:2px solid var(--color);color:var(--color-bg)}a em,a i{border:2px solid var(--color);border-radius:var(--border-radius);color:var(--color);display:inline-block;padding:1rem}figure{margin:0;padding:0}figure img{max-width:100%}figure figcaption{color:var(--color-text-secondary)}button:disabled,input:disabled{background:var(--color-bg-secondary);border-color:var(--color-bg-secondary);color:var(--color-text-secondary);cursor:not-allowed}button[disabled]:hover{filter:none}form{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:block;max-width:var(--width-card-wide);min-width:var(--width-card);padding:1.5rem;text-align:var(--justify-normal)}form header{margin:1.5rem 0;padding:1.5rem 0}input,label,select,textarea{display:block;font-size:inherit;max-width:var(--width-card-wide)}input[type=checkbox],input[type=radio]{display:inline-block}input[type=checkbox]+label,input[type=radio]+label{display:inline-block;font-weight:400;position:relative;top:1px}input,select,textarea{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);margin-bottom:1rem;padding:.4rem .8rem}input[readonly],textarea[readonly]{background-color:var(--color-bg-secondary)}label{font-weight:700;margin-bottom:.2rem}table{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);border-spacing:0;display:inline-block;max-width:100%;overflow-x:auto;padding:0;white-space:nowrap}table td,table th,table tr{padding:.4rem .8rem;text-align:var(--justify-important)}table thead{background-color:var(--color);border-collapse:collapse;border-radius:var(--border-radius);color:var(--color-bg);margin:0;padding:0}table thead th:first-child{border-top-left-radius:var(--border-radius)}table thead th:last-child{border-top-right-radius:var(--border-radius)}table thead th:first-child,table tr td:first-child{text-align:var(--justify-normal)}table tr:nth-child(even){background-color:var(--color-accent)}blockquote{display:block;font-size:x-large;line-height:var(--line-height);margin:1rem auto;max-width:var(--width-card-medium);padding:1.5rem 1rem;text-align:var(--justify-important)}blockquote footer{color:var(--color-text-secondary);display:block;font-size:small;line-height:var(--line-height);padding:1.5rem 0} article{padding: 1.25rem;}.v-cover{height: 480px; object-fit: cover;width: 100vw;cursor: pointer;}.v-image{height: 250px; object-fit: cover;width: 100vw;cursor: pointer;}.dwn-cover{max-height: 460px; object-fit: cover;}.w-100{width: 100vw}.search-box{color:#333;background-color:#f5f5f5;width:85%;height:50px;padding:0 20px;border:none;border-radius:20px;outline:0;border:1px solid #002cd92e}.search-box:active,.search-box:focus,.search-box:hover{border:1px solid #d9008e}.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;padding:.375rem .75rem;margin:0.5rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}.btn-danger{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-group-sm>.btn,.btn-sm{padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}
+</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "DingDong"
+  },
+  "headline": "Data Science University Of Hong Kong",
+  "datePublished": "2021-03-08",
+  "image": "https://i.pinimg.com/474x/7d/a8/d3/7da8d3157bfb8962f2e0bbc875fa577e.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Togel Eyang SGP",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=data+science+university+of+hong+kong",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+	<script type='text/javascript' src='//zqvee2re50mr.com/7c/26/34/7c263438c0a922e610bc1e9951cbc44f.js'></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4514872,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4514872&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  --></head>
+<body>
+    <header>
+        <h1>
+            <a href="/">
+            Data Science University Of Hong Kong
+            </a>
+        </h1>
+        <p>
+                            Data HK - Pengeluaran Hongkong - Keluaran HK, Data HK Sahabat, Hasil Result HK Hari Ini Dengan update tercepat dan lengkap 
+                    </p>
+        <center>
+            <input class='search-box' id="search-box" placeholder='Search and hit enter..' type='text' name="q" required autocomplete="off" id="search-query">
+            <div class="d-block p-4">
+	<center>
+		<!-- TOP BANNER ADS -->
+	</center>
+</div>        </center>
+    </header>
+    <main>
+        <article>
+    <p><strong>Data Science University Of Hong Kong</strong>. Hong Kong society is ageing rapidly. The Department of Statistics and Actuarial Science and Department of Computer Science jointly offer a postgraduate curriculum leading to the degree of Master of Data Science with two study modes.</p>
+            <figure>
+        <img class="v-cover ads-img" src="https://i.pinimg.com/474x/9a/d1/21/9ad121d168a3820448636e8044c086ca.jpg" alt="Coursera Paid Courses The Hong Kong University Of Science And Technology Social Science Appr Social Science University Of Sciences Social Science Research" style="width: 100%; padding: 5px; background-color: grey;"  onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQK0lYdP48xQKaUZNu3jBgq0NCMKfczyBGHA';">
+        <figcaption>Coursera Paid Courses The Hong Kong University Of Science And Technology Social Science Appr Social Science University Of Sciences Social Science Research from www.pinterest.com</figcaption>
+    </figure>
+        <p>
+        The programme is organised by the Department of Statistics at the Chinese University of Hong Kong. The programme is designed to provide a rigorous training in the principles and the practice of statistics. The MSc in Business and Data Analytics MScBDA programme aims to cultivate students with professional knowledge of business data analytics through active learning of the theories methods supporting techniques across a wide range of knowledge areas such as applied statistics big data management data mining and social media analytics.
+    </p>
+    <h3>The one and a half academic years full-time mode and the two and a half academic years part-time mode.</h3>
+    <p>The programme is organised by the Department of Statistics at the Chinese University of Hong Kong. Curriculum Course List Suggested Study Pattern Management and Academic Staff. For Hong Kong PhD Fellowship HKPFS Application for PhD studies only. Full-time mode with one and a half academic years and part-time mode with two and a half academic years. The program aims at training students with some science or engineering background who would like to prepare themselves for careers that require modeling skills based on information extracted from data. The programme is designed to provide a rigorous training in the principles and the practice of statistics.</p>
+</article>
+
+<section>
+
+    <aside>
+        <img class="v-image ads-img" alt="Coursera Take The World S Best Courses Online For Free Information Theory Course Catalog Architecture Websites" src="https://i.pinimg.com/originals/9c/80/5c/9c805c2cd438557c270d166f8edd5a7e.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFaWPth7L05hIz_AFgzJaH20mAaGMMLHhI6g';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>And agree to have University of Sunderland in Hong Kong contact me using the above personal information provided in order to give me further programme details and assist in application and enrolment.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Coursera Bachelor Degree The Hong Kong University Of Science And Technology China S Eco University Of Sciences Science And Technology Certificate Programs" src="https://i.pinimg.com/474x/b7/00/15/b700151ae4fd9ea7cf0d9888e663fb67.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkgoti8-nVUFjYnpHRL6r11BENGCxS2o72ODWHll9NbHX7iBI3nQzorkf7hC5RAuvwrybJfY64gcYcbAGJiu4&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>About Master of Data Science at The University of Hong Kong The Department of Statistics and Actuarial Science and Department of Computer Science jointly offer a postgraduate curriculum leading to the degree of Master of Data Science with two study modes.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Hong Kong Phd Fellowship Scheme Hkpfs Ilovephd Phd Interpersonal Skills Kong" src="https://i.pinimg.com/originals/03/17/20/0317203446e49521aa1e395c53f48210.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_MhKW0vYRE0B1GTUVb_Kzc4sIoJz5p_R-remkfBJ_FUxdRxGX_kPZIm3ddmAELLxNEzcAFt8PutenseTwojk&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>The Hong Kong University of Science and Technology HKUST CEF Institution Code 003 Institution HKUST CEF Course Code 34Z126908.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Coursera Subscription The Hong Kong University Of Science And Technology Front End Web Development W Mobile App Development App Development Web Technology" src="https://i.pinimg.com/474x/5c/8c/1b/5c8c1b7b46dbe25dc94b6b737427dce3.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1THEPsB35rRaT66sw0z5SEgsG-M4jelRsjQ';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Its interdisciplinarity promotes the applications of computer technology operational research statistical modelling and simulation to decision-making and problem-solving in all organizations and enterprises within the private and public sectors.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Online Course Websites Like Coursera The Hong Kong University Of Science And Technology Soci Social Science Social Science Research University Of Sciences" src="https://i.pinimg.com/474x/a2/45/0a/a2450a2467764de36c90be3bf08101d4.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQePy9ZNAjTlYrQVITyEbz9s1LH-kPFORrih_uGwJHTQ87QRmWYt6b5BF-pqJl3MgB0w9vNc5JOl8HjQD1NNog&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Step 1 deadline at RGC to obtain an HKPFS reference no.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Chinese University Of Hong Kong University University Housing Higher Education" src="https://i.pinimg.com/600x315/fb/d3/92/fbd392924e23ac4b815d5ae34def8812.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvkAS-3BF7bk_yBCW8vKQQsJCPxhXIQTsQUA';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>It emphasizes in applications and aims to prepare candidates for further study research consulting work and administration in various fields through computer-aided and hands-on experience.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="The University Of Hong Kong Knowledge Exchange Knowledge Management Knowledge Leadership" src="https://i.pinimg.com/originals/51/3b/b1/513bb16252793ed4dc6753a822c96aeb.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7a9pZm2zCGmkpkwiFy0YHZbV4EyBQ-c6bFA';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>The program aims at training students with some science or engineering background who would like to prepare themselves for careers that require modeling skills based on information extracted from data.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Account Suspended Data Science Online Science Regular Expression" src="https://i.pinimg.com/originals/66/f5/e6/66f5e6c76ce6a41439f1cbb2f55f8c04.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6NDFOMZt2KH91tb0rg1G2GolKsLtAIEHesA';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>The one and a half academic years full-time mode and the two and a half academic years part-time mode.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Job Skill Mapping For Data Science By Anup Mandavariya Data Scientist At Amazon Data Science Data Scientist Webinar" src="https://i.pinimg.com/originals/d2/af/c8/d2afc8796a56b79dda0e8eba3d938c4d.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsiS2Bs0JqFv3vd_VVXKZ4M-o8UvCZq0qScbcDUQPhFrow2ggChIRdYftUvC32ckWKCJE7GBkwFsQGc4Hu438&amp;ec=45774424';" />
+        <small>Source: in.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>The School of Data Science SDSC offers interdisciplinary undergraduate curricula that provide a solid foundation in data science and state-of-the-art spectra of data science subjects as well as the chance to undertake projects and courses connected with promising application areas in data science such as systems analytics social media analysis the Internet of Things IoT Smart City.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Coursera On Demand The Hong Kong University Of Science And Technology Fintech Disruptive Innov Disruptive Innovation Learning Sites University Of Sciences" src="https://i.pinimg.com/474x/49/8d/8f/498d8f1e74befc58919cf52ffdd20d8f.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_YwesNzktw-G199WTAJWaN22vyd4keVmPkzrYELcHqqPyvh42_OB55bJZ12DzDsc-hGDJiFKRMZfP_qPB1w&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>For Hong Kong PhD Fellowship HKPFS Application for PhD studies only.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Coursera Courses Review University Of Colorado System Advanced Clinical Data Scie Online Education Programs Online Education Importance Of Time Management" src="https://i.pinimg.com/474x/6a/9a/c4/6a9ac44b48071def1bf0d377748fba82.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcoQ0zDWPTX61YF0a9Y1LYwbqDcZTi5Y7_j-pPVWzIIMvUHYCQhv5nelT3Mr8RRCVuar0jb4Bc_eHVAdj-O4Y&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>It emphasizes in applications and aims to prepare candidates for further study research consulting work and administration in various fields through computer-aided and hands-on experience.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Coursera English Version The Hong Kong University Of Science And Technology Python And St Financial Analysis Web Development Course University Of Sciences" src="https://i.pinimg.com/474x/d5/41/8d/d5418d4fb8ff5a55a2e021b3950291e6.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSimY7zq4EWMnVXkI-AMA81yIqkhni7UVNvkyIggPAlWNZ70RKlmp2bnb-Sr27kXqUcD__sEywLlW-N_4FudHw&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>University of Sunderland in Hong Kong offers a wide range of academic programmes including.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="20 Oct 2019 The Hong Kong University Of Science And Technology Sai Kung Ad Ad Hong Kong Oct Sai University Of Sciences University Science And Technology" src="https://i.pinimg.com/originals/25/74/43/257443074539a2e59d7fcf542a198ebb.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHwUDsAArYm8d8xkPJeBq0_qyGAjZ_T4tKiXI2U1wi06ApBMT_JG2-C8J93TNnUpZdkOJx9akErYs2ojNCNdU&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>MSc in Data Science is a joint programme launched by School of Science and Engineering and School of Management and Economics in collaboration with Shenzhen Research Institute of Big Data and.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="20 Oct 2019 The Hong Kong University Of Science And Technology Sai Kung Ad Ad Hong Kong Oct Sai University Of Sciences University" src="https://i.pinimg.com/originals/79/6c/64/796c64e79f5b2678bc45b85c2cb6bd12.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfHJRKlSqlXDlni8nYyM86UNlLCl-cMX_bfQ';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>HKU scholars in social sciences architecture engineering and medicine have been testing physical and social improvements that would allow the elderly to be more mobile receive better support for problems like dementia and have a healthy meaningful old age.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Hong Kong University Incredible Places Hong Kong Best University" src="https://i.pinimg.com/originals/68/38/6a/68386a06cef9069de37134eae1e12412.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzRfz1F22tzkpa9bjrkKhMKOeY-PZ1NjvCkptt8o0bgnv7ijsMNTgq7FdOTN5W9uEqV2jjryd6wgytw1c5f7g&amp;ec=45774424';" />
+        <small>Source: nl.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Students must complete three core courses and a minimum of 5 electives.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Coursera Paid Courses The Hong Kong University Of Science And Technology Social Science Appr Social Science University Of Sciences Social Science Research" src="https://i.pinimg.com/474x/9a/d1/21/9ad121d168a3820448636e8044c086ca.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQK0lYdP48xQKaUZNu3jBgq0NCMKfczyBGHA';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Step 1 deadline at RGC to obtain an HKPFS reference no.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Smart Data Smart Government Fostering A Smart City Model In Hong Kong Smart City Smart City Model" src="https://i.pinimg.com/originals/f7/ee/7a/f7ee7aa415e45617d37167fe810de7a5.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGaZCmDM1PVRLqiPRvl5IAPKW1vZY9ko3Ws0DZQgYmezHhfwaTiCwt52Iv5byyaCv4rwuc-4kKpst_qVPHOd8&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Master of Data Science MDASC is a taught master programme jointly offered by Department of Statistics and Actuarial Science host and Department of Computer Science.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Hong Kong University Of Science And Technology Is One Of Nine Universities In Hong Kong It Con University Of Sciences Social Science Colleges And Universities" src="https://i.pinimg.com/originals/e9/45/a9/e945a9a829de5e235cc366377322942e.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKtRPxv6tLH47TLvWMjepUL_Y43OEkzrC6eWN8mP5xg2GF_OL9riVaZ66HY7N4mMNmUf3_ojcrRmSYzUshVNw&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>HKU scholars in social sciences architecture engineering and medicine have been testing physical and social improvements that would allow the elderly to be more mobile receive better support for problems like dementia and have a healthy meaningful old age.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Mooc Providers Coursera The Hong Kong University Of Science And Technology The Science Of Gas University Of Sciences Science And Technology What Is Energy" src="https://i.pinimg.com/236x/5c/49/5d/5c495d84ca693c13494db4af9009097f.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyNvSqT2wQ64Ik_TGPQwWrPXwBLoxQvsDPvg';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>And agree to have University of Sunderland in Hong Kong contact me using the above personal information provided in order to give me further programme details and assist in application and enrolment.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Account Suspended Data Science Graph Database Data Folder" src="https://i.pinimg.com/600x315/d8/70/be/d870bef3f90f0a5023359a20f0a97748.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiB8wdwpsXbFdCozMCUFihpMlzKkMUXWV0yA';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>DSPS Programme offers a comprehensive and balanced curriculum on fundamental aspects of data statistical and machine learning knowledge policy design and analytics techniques as well as hands-on experience with data.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Coursera English Version The Hong Kong University Of Science And Technology Protecti Business Innovation Small Business Ideas Startups Business Protection" src="https://i.pinimg.com/474x/6d/3d/89/6d3d899563a9033f098cc614d151e4eb.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9lVlIsel6KWUIJMUgzaPZRl5X5tznnBV8PQ';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>About Master of Data Science at The University of Hong Kong The Department of Statistics and Actuarial Science and Department of Computer Science jointly offer a postgraduate curriculum leading to the degree of Master of Data Science with two study modes.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Pin On Family Business Photos" src="https://i.pinimg.com/736x/e1/3e/69/e13e69b048735d9181ddb26c2f4d5c34.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtBmrlvXuZSuUYJUBXNxmlkCqiMn34uYDE5RA4qJgQOgI8NwqSP0BrbqsMSbxZ2tRIg1gvL5T0nDpsoCzTW4Y&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Exploring Data Science to provide the technical and practical skills to analyse big data - a key to success in future business and digital media.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Pin On Course Online" src="https://i.pinimg.com/474x/7d/a8/d3/7da8d3157bfb8962f2e0bbc875fa577e.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWgyiiOwdnMPwHbLJSfUtWOEh6Gp9gpNGdLt8z1muWENoRBlPh_nk1bmNfZC8W-EdlBLbdKAEncWPnAXjwiGI&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>The programme is organised by the Department of Statistics at the Chinese University of Hong Kong.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Are Coursera Courses Recognized The Chinese University Of Hong Kong The University Of Melbourne Science Method University Of Melbourne Reading Workshop" src="https://i.pinimg.com/236x/1c/bf/cc/1cbfccaba6033760e525ca97e7a5643b.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRjx9DZkVN9gGWUp6I8nL7kqYf8xt268t3MRQQKQWyl78am-C18cyg-fkoaYFW2euRzf8K40RDkAv3V1R5x0s&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>The programme is designed to provide a rigorous training in the principles and the practice of statistics.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Data Scientist Anatomy Data Science Learning Data Science Data Scientist" src="https://i.pinimg.com/originals/61/e7/4c/61e74c3e60899bd4ca239b3afce93b17.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc6_6-elAuY3uUaWy9CB5v-K4iMxg78mWJcUvDL0PFaNcmqTDYEqMbQAEF5_Px3-FjDpKocLUvHA16p3yjCfY&amp;ec=45774424';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>DSPS Programme offers a comprehensive and balanced curriculum on fundamental aspects of data statistical and machine learning knowledge policy design and analytics techniques as well as hands-on experience with data.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Pin On Data Science" src="https://i.pinimg.com/originals/a7/5e/2e/a75e2e773ee1ef2e5814226c5c7cd621.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRRyUvW8ydRUa_lCkHRMxGymkAao52unHg5WwXqRL5_tTMmMEZYJES71FitujE9IK-6ArQKN17XEtwfsO4oGA&amp;ec=45774424';" />
+        <small>Source: ar.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>The University of Hong Kong abbreviated as HKU is a public research university in Hong KongFounded in 1911 its origins trace back to the Hong Kong College of Medicine for Chinese which was founded in 1887It is the oldest tertiary institution in Hong Kong.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Data Science Lab Management Sciences University Of Waterloo" src="https://i.pinimg.com/originals/fd/27/d2/fd27d2838543a35e06f0c7cddb8f325d.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKIq-PuZbL_QtfBo-gaI5BPqkYfe-6q9avUA';" />
+        <small>Source: br.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>HKU scholars in social sciences architecture engineering and medicine have been testing physical and social improvements that would allow the elderly to be more mobile receive better support for problems like dementia and have a healthy meaningful old age.</p>
+    </aside>
+</section>
+<section>
+    <article>
+        <p>
+        <center><strong>RELATED POST</strong></center>
+        <center>
+								<a class="badge badge-dark" href="/togel-untuk-hongkong.html">togel untuk hongkong</a>
+											<a class="badge badge-info" href="/togel-wuhan.html">togel wuhan</a>
+											<a class="badge badge-warning" href="/togel-wap-hongkong-hari-ini.html">togel wap hongkong hari ini</a>
+											<a class="badge badge-light" href="/togelmaster-data-pengeluaran-hk-4d.html">togelmaster data pengeluaran hk 4d</a>
+											<a class="badge badge-light" href="/wwwtogel-master-hk-6d.html">wwwtogel master hk 6d</a>
+											<a class="badge badge-primary" href="/wwwtogel-master.html">wwwtogel master</a>
+											<a class="badge badge-light" href="/welcome-data-hk-6d-live-draw-pools-6.html">welcome data hk 6d live draw pools 6</a>
+											<a class="badge badge-primary" href="/totobet-net-data-hk-php.html">totobet net data hk php</a>
+											<a class="badge badge-danger" href="/togel-utama-hongkong.html">togel utama hongkong</a>
+											<a class="badge badge-light" href="/togel-ular-masuk-rumah.html">togel ular masuk rumah</a>
+											<a class="badge badge-success" href="/togelxxi.html">togelxxi</a>
+											<a class="badge badge-success" href="/togelnya-hari-ini-keluar-berapa.html">togelnya hari ini keluar berapa</a>
+											<a class="badge badge-secondary" href="/togel-xinjiang.html">togel xinjiang</a>
+											<a class="badge badge-light" href="/togel-uang-kertas.html">togel uang kertas</a>
+											<a class="badge badge-primary" href="/togel-warsaw.html">togel warsaw</a>
+											<a class="badge badge-info" href="/togel-uganda.html">togel uganda</a>
+											<a class="badge badge-primary" href="/wwwtogel-master-hk.html">wwwtogel master hk</a>
+											<a class="badge badge-info" href="/togel-washington.html">togel washington</a>
+											<a class="badge badge-warning" href="/togel-washington-dc-midday.html">togel washington dc midday</a>
+											<a class="badge badge-danger" href="/togel-wisconsin.html">togel wisconsin</a>
+							</center>
+        </p>
+    </article>
+</section>
+		<center>
+			<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+	</center>
+</div>		</center>
+    </main>
+    <footer style="padding-top: 50px;">
+        <center>
+                            <a href="/p/dmca.html">Dmca</a>
+                            <a href="/p/contact.html">Contact</a>
+                            <a href="/p/privacy-policy.html">Privacy Policy</a>
+                            <a href="/p/copyright.html">Copyright</a>
+                    </center>
+    </footer>
+    <script type='text/javascript' src='//zqvee2re50mr.com/a4/31/b2/a431b2df4b60e2629306f7e7e7465d31.js'></script>            <script type="text/javascript">
+        window.onload = function() {
+            var v_images = document.getElementsByClassName('ads-img');
+            for(var i = 0; i < v_images.length; i++) {
+                var v_img = v_images[i];
+                v_img.onclick = function() {
+                    window.open('https://zqvee2re50mr.com/f92qg63vc?key=ac20300e264cf09199ec3eda378fd7bb', '_blank');
+                }
+            }
+        }
+    </script>
+        <script type="text/javascript">
+        var search = document.getElementById("search-box");
+        search.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                var target = 'site:'+location.host+' '+search.value;
+                var uri= 'https://www.google.com/search?q='+encodeURIComponent(target);
+                window.location= uri;
+            }
+        });
+    </script>
+</body>
+
+</html>
